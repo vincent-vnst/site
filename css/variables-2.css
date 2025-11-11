@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Variables Sémantiques (Thème "Doux & Minimaliste")
+   ========================================================================== */
+:root {
+
+    /* === Couleurs de Marque (Brand) === */
+    /* On passe du bleu à un saumon/corail doux */
+    --color-brand-primary: #ff8a65;
+    --color-brand-dark: #d84315;
+    --color-brand-accent: #ffab91;
+    --color-brand-hover: #ffab91;
+
+    /* === Couleurs de Fond (Background) === */
+    /* On utilise des fonds plats et très clairs */
+    --color-bg-body: #fdfdfd;
+    --color-bg-header: linear-gradient(135deg, var(--color-brand-primary), var(--color-brand-dark));
+    --color-bg-footer: #3c3c3c;
+    /* Un gris foncé doux, pas un noir pur */
+    --color-bg-nav-hover: #f1f1f1;
+    --color-bg-card-light: #ffffff;
+    /* Cartes blanches simples */
+    --color-bg-card-mid: #ffffff;
+    --color-bg-card: var(--color-text-inverted);
+    /* Fond blanc uni */
+
+    /* === Couleurs de Texte === */
+    /* On utilise des gris foncés, pas de noir pur, pour un look plus doux */
+    --color-text-primary: #333333;
+    --color-text-secondary: #555555;
+    --color-text-heading: #333333;
+    /* Titres de la même couleur pour le minimalisme */
+    --color-text-inverted: white;
+    --color-text-nav-link: #ffffff;
+    /* Liens blancs sur le fond corail */
+    --color-text-caption: #777777;
+
+    /* === Couleurs de Bordure et UI === */
+    --color-border-subtle: #eeeeee;
+    /* Bordures très claires */
+    --color-border-medium: #dddddd;
+    --color-ui-nav-bar: var(--color-text-inverted);
+    /* Barre blanche */
+
+    /* === Polices === */
+    /* On utilise une police très arrondie (Nunito) partout pour la douceur */
+    --font-family-body: 'Nunito', 'system-ui', sans-serif;
+    --font-family-heading: 'Nunito', 'system-ui', sans-serif;
+    --font-weight-heading: 700;
+    /* On met les titres en gras */
+
+    /* === Échelle de Typographie Fluide === */
+    /* L'échelle structurelle est parfaite, on n'y touche pas */
+    --font-size-body: clamp(0.95rem, 0.9rem + 0.2vw, 1.1rem);
+    --font-size-caption-avatar: clamp(0.85rem, 0.8rem + 0.2vw, 1rem);
+    --font-size-caption-project: clamp(0.8rem, 0.75rem + 0.2vw, 0.85rem);
+    --font-size-p-project: clamp(0.85rem, 0.8rem + 0.2vw, 0.9rem);
+    --font-size-h1-header: clamp(2rem, 1.75rem + 1vw, 2.5rem);
+    --font-size-h1-main: clamp(2rem, 1.8rem + 0.5vw, 2.2rem);
+    --font-size-h2: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+    --font-size-h3-project: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
+    --font-size-h2-project: clamp(1.5rem, 1.3rem + 1vw, 1.8rem);
+    --font-size-social-icon: clamp(1.5rem, 1.4rem + 0.5vw, 1.75rem);
+
+    /* === Espacements === */
+    /* L'échelle structurelle est parfaite, on n'y touche pas */
+    --spacing-xs: 8px;
+    --spacing-sm: 10px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 20px;
+    --spacing-xxl: 32px;
+
+    /* === Tailles de Layout === */
+    /* La structure ne change pas */
+    --avatar-size-mobile: 120px;
+    --avatar-size-desktop: 150px;
+    --container-max-width: 1000px;
+
+    /* === Arrondis (Borders) === */
+    /* On exagère les arrondis pour un look "bulle" */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+
+    /* === Ombres (Shadows) === */
+    /* On utilise des ombres très douces et diffuses */
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --shadow-header: 0 4px 10px rgba(0, 0, 0, 0.05);
+    --shadow-image: 0 4px 8px rgba(0, 0, 0, 0.05);
+    --shadow-avatar-hover: 0 6px 16px rgba(0, 0, 0, 0.1);
+    --shadow-card-hover: 0 6px 16px rgba(0, 0, 0, 0.1);
+    --shadow-text: none;
+    /* Pas d'ombre de texte */
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <base href="../">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 1 - Portfolio de Vincent Vanneste</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projet.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header id="haut" aria-label="En-tête du site">
+        <figure>
+            <img src="images/photo.jpg" alt="Photo de Vincent Vanneste">
+            <figcaption id="figcaption-vv">Vincent Vanneste</figcaption>
+        </figure>
+
+        <h1>Portfolio de Vincent Vanneste</h1>
+
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="https://www.univ-littoral.fr/" target="_blank">ULCO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article aria-labelledby="titre-projetX" class="projets">
+
+            <header>
+                <h2 id="titre-projetX">Projet X <br> Découverte du HTML et du CSS</h2>
+                <figure>
+                    <img src="images/projetX.png" alt="Capture d’écran du Projet X">
+                    <figcaption>Image représentant le projet X</figcaption>
+                </figure>
+            </header>
+
+            <section aria-labelledby="description-projet">
+                <h2 id="description-projet">Description du projet</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, voluptate sapiente? Est praesentium
+                    consequuntur aut aperiam inventore rem facilis dolore excepturi in dolorem itaque, mollitia
+                    voluptatibus et perferendis, dignissimos ipsam?
+                </p>
+            </section>
+
+            <section aria-labelledby="objectifs-projet">
+                <h2 id="objectifs-projet">Objectifs pédagogiques</h2>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="competences-visees">
+                <h2 id="competences-visees">Compétences visées</h2>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, expedita!</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, et.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, expedita!</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, et.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, expedita!</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, et.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, expedita!</li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="resultat-projet">
+                <h2 id="resultat-projet">Résultat obtenu</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam illum optio asperiores quo eveniet
+                    possimus maiores. Nesciunt, vel? Odit exercitationem architecto fuga magni quidem ea, tempore ullam
+                    mollitia libero nesciunt?
+                </p>
+                <p>
+                    <a href="" class="btn" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-eye"></i> Voir la démo
+                    </a>
+                </p>
+            </section>
+
+            <nav class="nav-projets" aria-label="Navigation entre les projets">
+                <a href="projets/projetX-1.html" class="prev">← Projet précédent</a>
+                <a href="projets/projetX+1.html" class="next">Projet suivant →</a>
+            </nav>
+
+        </article>
+    </main>
+
+    <footer aria-label="Pied de page">
+        <p>&copy; 2025 <strong>Vincent Vanneste</strong>. Tous droits réservés.</p>
+        <!-- Réseaux sociaux -->
+        <div class="socials" role="navigation" aria-label="Réseaux sociaux">
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/" target="_blank" aria-label="X">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

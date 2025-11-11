@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Variables Sémantiques
+   ========================================================================== */
+:root {
+
+    /* === Couleurs de Marque (Brand) === */
+    --color-brand-primary: #0073e6;
+    --color-brand-dark: #004a99;
+    --color-brand-accent: #0066cc;
+    /* Utilisé pour les bordures, liens... */
+    --color-brand-hover: #00a2ff;
+    /* Pour les survols interactifs */
+
+    /* === Couleurs de Fond (Background) === */
+    --color-bg-body: linear-gradient(135deg, #e8f0ff 0%, #f9fcff 100%);
+    --color-bg-header: linear-gradient(135deg, var(--color-brand-primary), var(--color-brand-dark));
+    --color-bg-footer: linear-gradient(135deg, #1e3a5f, #0a2340, #224c80, #162d50);
+    --color-bg-nav-hover: #ddd;
+    --color-bg-card-light: #f0f8ff;
+    /* Pour dégradé carte projet */
+    --color-bg-card-mid: #d0f0ff;
+    /* Pour dégradé carte projet */
+    --color-bg-card: linear-gradient(135deg,
+            var(--color-text-inverted, #fff) 0%,
+            var(--color-bg-card-light, #f0f8ff) 25%,
+            var(--color-bg-card-mid, #d0f0ff) 50%,
+            var(--color-bg-card-light, #f0f8ff) 75%,
+            var(--color-text-inverted, #fff) 100%);
+
+    /* === Couleurs de Texte === */
+    --color-text-primary: #222;
+    /* Corps de texte principal */
+    --color-text-secondary: #333;
+    /* Plus clair (ex: survol nav) */
+    --color-text-heading: #1e3a5f;
+    /* Titres (H1, H2) dans Main */
+    --color-text-inverted: white;
+    /* Texte sur fonds sombres (header, footer) */
+    --color-text-nav-link: #bfc5cb;
+    /* Liens nav header (discret) */
+    --color-text-caption: #666;
+    /* Légendes projet */
+
+    /* === Couleurs de Bordure et UI === */
+    --color-border-subtle: #ddd;
+    /* Bordures discrètes (header) */
+    --color-border-medium: #ccc;
+    /* Bordures projet */
+    --color-ui-nav-bar: white;
+    /* Barre animée nav */
+
+    /* === Polices === */
+    --font-family-body: 'Poppins', Arial, sans-serif;
+    --font-family-heading: 'Roboto', sans-serif;
+    --font-weight-heading: 600;
+
+    /* === Échelle de Typographie Fluide === */
+    --font-size-body: clamp(0.95rem, 0.9rem + 0.2vw, 1.1rem);
+    --font-size-caption-avatar: clamp(0.85rem, 0.8rem + 0.2vw, 1rem);
+    --font-size-caption-project: clamp(0.8rem, 0.75rem + 0.2vw, 0.85rem);
+    --font-size-p-project: clamp(0.85rem, 0.8rem + 0.2vw, 0.9rem);
+    --font-size-h1-header: clamp(2rem, 1.75rem + 1vw, 2.5rem);
+    --font-size-h1-main: clamp(2rem, 1.8rem + 0.5vw, 2.2rem);
+    --font-size-h2: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+    --font-size-h3-project: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
+    --font-size-h2-project: clamp(1.5rem, 1.3rem + 1vw, 1.8rem);
+    --font-size-social-icon: clamp(1.5rem, 1.4rem + 0.5vw, 1.75rem);
+
+    /* === Espacements === */
+    --spacing-xs: 8px;
+    /* 0.5rem */
+    --spacing-sm: 10px;
+    /* 0.625rem */
+    --spacing-md: 12px;
+    /* 0.75rem */
+    --spacing-lg: 16px;
+    /* 1rem */
+    --spacing-xl: 20px;
+    /* 1.25rem (ex: padding section) */
+    --spacing-xxl: 32px;
+    /* 2rem */
+
+    /* === Tailles de Layout === */
+    --avatar-size-mobile: 120px;
+    --avatar-size-desktop: 150px;
+    --container-max-width: 1000px;
+
+    /* === Arrondis (Borders) === */
+    --border-radius-sm: 4px;
+    --border-radius-md: 6px;
+    --border-radius-lg: 8px;
+
+    /* === Ombres (Shadows) === */
+    --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.1);
+    --shadow-header: 0 4px 10px rgba(0, 0, 0, 0.15);
+    --shadow-image: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-avatar-hover: 0 4px 12px rgba(0, 0, 0, 0.3);
+    --shadow-card-hover: 0 8px 20px rgba(0, 0, 0, 0.2);
+    --shadow-text: 1px 1px 2px rgba(0, 0, 0, 0.25);
+}

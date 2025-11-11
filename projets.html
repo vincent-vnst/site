@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Projets</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projets.css">
+    <!-- Import de polices externes (Google Fonts) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome CDN pour icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header id="haut" aria-label="En-tête du site">
+        <figure aria-labelledby="figcaption-vv">
+            <img src="images/photo.jpg" alt="Photo de Vincent Vanneste">
+            <figcaption id="figcaption-vv">Vincent Vanneste</figcaption>
+        </figure>
+
+        <h1>Portfolio de Vincent Vanneste</h1>
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="https://www.univ-littoral.fr/" target="_blank">ULCO</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section aria-labelledby="liste-projets" class="projets">
+            <h2 id="liste-projets">Liste des projets</h2>
+
+            <article aria-labelledby="titre-projet1">
+                <h3 id="titre-projet1"><a href="projets/projet1.html">Projet 1</a></h3>
+                <figure aria-labelledby="fig-projet1">
+                    <img src="images/vignettes/projet1.jpg" alt="Aperçu du Projet 1">
+                    <figcaption id="fig-projet1">Aperçu du Projet 1</figcaption>
+                </figure>
+                <p>Un projet qui présente les bases du HTML et de la mise en page.</p>
+            </article>
+
+            <article aria-labelledby="titre-projet2">
+                <h3 id="titre-projet2"><a href="projets/projet2.html">Projet 2</a></h3>
+                <figure aria-labelledby="fig-projet2">
+                    <img src="images/vignettes/projet2.jpg" alt="Aperçu du Projet 2">
+                    <figcaption id="fig-projet2">Aperçu du Projet 2</figcaption>
+                </figure>
+                <p>Un site en CSS avec une mise en forme responsive adaptée aux mobiles.</p>
+            </article>
+
+            <article aria-labelledby="titre-projet3">
+                <h3 id="titre-projet3"><a href="projets/projet3.html">Projet 3</a></h3>
+                <figure aria-labelledby="fig-projet3">
+                    <img src="images/vignettes/projet3.jpg" alt="Aperçu du Projet 3">
+                    <figcaption id="fig-projet3">Aperçu du Projet 3</figcaption>
+                </figure>
+                <p>Un mini-site en JavaScript avec des interactions simples.</p>
+            </article>
+
+            <article aria-labelledby="titre-projet4">
+                <h3 id="titre-projet4"><a href="projets/projet4.html">Projet 4</a></h3>
+                <figure aria-labelledby="fig-projet4">
+                    <img src="images/vignettes/projet4.jpg" alt="Aperçu du Projet 4">
+                    <figcaption id="fig-projet4">Aperçu du Projet 4</figcaption>
+                </figure>
+                <p>Une application web utilisant PHP et MySQL pour gérer des données.</p>
+            </article>
+
+            <article aria-labelledby="titre-projet5">
+                <h3 id="titre-projet5"><a href="projets/projet5.html">Projet 5</a></h3>
+                <figure aria-labelledby="fig-projet5">
+                    <img src="images/vignettes/projet5.jpg" alt="Aperçu du Projet 5">
+                    <figcaption id="fig-projet5">Aperçu du Projet 5</figcaption>
+                </figure>
+                <p>Un projet complet combinant HTML, CSS, JS et base de données.</p>
+            </article>
+
+        </section>
+    </main>
+
+    <footer aria-label="Pied de page">
+        <p>&copy; 2025 <strong>Vincent Vanneste</strong>. Tous droits réservés.</p>
+        <!-- Réseaux sociaux -->
+        <div class="socials" role="navigation" aria-label="Réseaux sociaux">
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/" target="_blank" aria-label="X">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+/* ==========================================================================
+   En-tête d'Article
+   ========================================================================== */
+
+/* --- Conteneur de l'en-tête (article>header) --- */
+article>header {
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    margin-bottom: var(--spacing-xxl);
+    /* 32px */
+
+    /***************************/
+    /* Alignement & Typographie */
+    /***************************/
+    text-align: center;
+}
+
+/* --- Image de l'en-tête d'article --- */
+article>header img {
+    /**************/
+    /* Dimensions */
+    /**************/
+    /* C'est déjà parfaitement responsive ! */
+    max-width: 100%;
+    height: auto;
+
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    margin-top: var(--spacing-xl);
+    /* 20px */
+
+    /********************/
+    /* Bordures & Ombre */
+    /********************/
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-image);
+}
+
+/* ==========================================================================
+   Titres de Section (H2)
+   ========================================================================== */
+
+/* --- Style commun des H2 de section (avec icônes) --- */
+section h2 {
+    /***********/
+    /* Flexbox */
+    /***********/
+    display: flex;
+    align-items: center;
+
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    gap: 0.5em;
+    margin-bottom: var(--spacing-lg);
+    /* 16px */
+
+    /***************/
+    /* Typographie */
+    /***************/
+    font-size: var(--font-size-h2);
+}
+
+/* ==========================================================================
+   Icônes des Titres (Pseudo-éléments)
+   ========================================================================== */
+
+/* --- Icône Description 📝 --- */
+#description-projet::before {
+    /***********************/
+    /* Contenu (Pseudo-élément) */
+    /***********************/
+    content: "\1F4DD";
+    /* Emoji "Note" (📝) */
+}
+
+/* --- Icône Objectifs 🎯 --- */
+#objectifs-projet::before {
+    /***********************/
+    /* Contenu (Pseudo-élément) */
+    /***********************/
+    content: "\1F3AF";
+    /* Emoji "Cible" (🎯) */
+}
+
+/* --- Icône Compétences 🛠️ --- */
+#competences-visees::before {
+    /***********************/
+    /* Contenu (Pseudo-élément) */
+    /***********************/
+    content: "\1F6E0";
+    /* Emoji "Outils" (🛠️) */
+}
+
+/* --- Icône Résultat ✅ --- */
+#resultat-projet::before {
+    /***********************/
+    /* Contenu (Pseudo-élément) */
+    /***********************/
+    content: "\2705";
+    /* Emoji "Coche" (✅) */
+}

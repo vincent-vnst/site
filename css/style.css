@@ -1,0 +1,208 @@
+/* ==========================================================================
+   CSS Général
+   ========================================================================== */
+
+/* --- Body --- */
+body {
+    font-family: var(--font-family-body);
+    color: var(--color-text-primary);
+    line-height: 1.5;
+    font-size: var(--font-size-body);
+    margin: 0;
+    background: var(--color-bg-body);
+    transition: background 0.5s ease;
+}
+
+/* --- Médias fluides --- */
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   En-tête (Header)
+   ========================================================================== */
+body>header {
+    text-align: center;
+    color: var(--color-text-inverted);
+    padding: var(--spacing-xl);
+    background: var(--color-bg-header);
+    border-bottom: 2px solid var(--color-border-subtle);
+    box-shadow: var(--shadow-header);
+    transition: background 0.3s ease;
+}
+
+/* --- Header H1 --- */
+body>header h1 {
+    font-family: var(--font-family-heading);
+    font-size: var(--font-size-h1-header);
+    letter-spacing: 0.5px;
+    text-shadow: var(--shadow-text);
+    margin: 10px 0;
+}
+
+/* --- Header Figure --- */
+body>header figure {
+    margin: 0 auto 10px;
+}
+
+/* --- Image de profil --- */
+body>header img {
+    width: var(--avatar-size-mobile);
+    border-radius: 50%;
+    border: 3px solid var(--color-brand-accent);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body>header img:hover {
+    transform: scale(1.08) rotate(2deg);
+    box-shadow: var(--shadow-avatar-hover);
+}
+
+/* --- Légende (Figcaption) --- */
+body>header figcaption {
+    font-size: var(--font-size-caption-avatar);
+    margin-top: var(--spacing-xs);
+}
+
+/* --- Nav Principale (Liste) --- */
+body>header nav ul {
+    display: flex;
+    flex-direction: column;
+    /* Mobile First: empilé */
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 0;
+    margin: 10px 0 0;
+    list-style: none;
+}
+
+/* --- Nav Principale (Lien) --- */
+body>header nav a {
+    text-decoration: none;
+    color: var(--color-text-nav-link);
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: var(--border-radius-sm);
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+body>header nav a:hover {
+    background-color: var(--color-bg-nav-hover);
+    color: var(--color-text-secondary);
+}
+
+/* --- Barre animée Nav --- */
+body>header nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--color-ui-nav-bar);
+    transition: width 0.3s ease;
+}
+
+body>header nav a:hover::after {
+    width: 100%;
+}
+
+/* --- Clic Nav --- */
+body>header nav li:active {
+    transform: scale(0.9);
+}
+
+/* ==========================================================================
+   Contenu Principal (Main)
+   ========================================================================== */
+main {
+    max-width: var(--container-max-width);
+    margin: auto;
+}
+
+/* --- Main H1 --- */
+main>h1 {
+    text-align: center;
+    color: var(--color-text-heading);
+    font-size: var(--font-size-h1-main);
+    margin: 20px 0;
+}
+
+/* --- Sections Main --- */
+main>section,
+main>article {
+    padding: 0 15px;
+}
+
+/* --- Main H2 --- */
+main>section h2,
+main>article h2 {
+    color: var(--color-text-heading);
+    font-size: var(--font-size-h2);
+}
+
+/* ==========================================================================
+   Pied de page (Footer)
+   ========================================================================== */
+footer {
+    color: var(--color-text-inverted);
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--color-bg-footer);
+    background-size: 200% 200%;
+    transition: background-position 0.5s ease;
+}
+
+footer:hover {
+    background-position: right bottom;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* --- Réseaux sociaux Footer --- */
+footer .socials {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    margin-top: 15px;
+}
+
+footer .socials a {
+    font-size: var(--font-size-social-icon);
+    color: var(--color-text-inverted);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .socials a:hover {
+    transform: translateY(-3px) scale(1.2);
+    color: var(--color-brand-hover);
+}
+
+
+/* ==========================================================================
+   Responsive (Point de rupture)
+   ========================================================================== */
+
+/* S'applique à partir de 768px et plus */
+
+@media (min-width: 768px) {
+
+    /* --- Restaure taille avatar desktop --- */
+    body>header img {
+        width: var(--avatar-size-desktop);
+    }
+
+    /* --- Restaure nav horizontale --- */
+    body>header nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+}

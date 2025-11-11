@@ -1,0 +1,305 @@
+/* ==========================================================================
+   Mise en page Grid (Contenu principal)
+   ========================================================================== */
+main {
+    /***********************/
+    /* Mise en page (Grid) */
+    /***********************/
+    display: grid;
+
+    /* "Mobile First" (1 colonne par défaut) */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "nav"
+        "about"
+        "competences"
+        "experiences"
+        "formations";
+
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    gap: var(--spacing-sm);
+    /* 10px */
+}
+
+/* --- Assignation des zones de la grille --- */
+main>nav {
+    grid-area: nav;
+}
+
+#about {
+    grid-area: about;
+}
+
+#competences {
+    grid-area: competences;
+}
+
+#experiences {
+    grid-area: experiences;
+}
+
+#formations {
+    grid-area: formations;
+}
+
+/* ==========================================================================
+   Navigation Interne (dans Main)
+   ========================================================================== */
+
+/* --- Liste de la navigation interne --- */
+main nav ul {
+    /***********/
+    /* Flexbox */
+    /***********/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    gap: var(--spacing-md);
+    /* 12px */
+    padding: 0;
+    margin: var(--spacing-xl) 0;
+    /* 20px */
+
+    /******************/
+    /* Style de liste */
+    /******************/
+    list-style: none;
+}
+
+/* --- Liens de la navigation interne --- */
+main nav a {
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    display: inline-block;
+    padding: 6px 12px;
+
+    /***************/
+    /* Typographie */
+    /***************/
+    text-decoration: none;
+    color: var(--color-text-inverted);
+    font-weight: bold;
+
+    /****************************/
+    /* Couleurs & Arrière-plans */
+    /****************************/
+    background-color: var(--color-brand-primary);
+
+    /************/
+    /* Bordures */
+    /************/
+    border-radius: var(--border-radius-md);
+    /* 6px */
+
+    /***************/
+    /* Transitions */
+    /***************/
+    transition: transform 0.2s ease;
+}
+
+/* --- Survol des liens de navigation interne --- */
+main nav a:hover {
+    /****************************/
+    /* Couleurs & Arrière-plans */
+    /****************************/
+    background: linear-gradient(135deg, var(--color-brand-primary), var(--color-brand-hover));
+
+    /*******************/
+    /* Transformations */
+    /*******************/
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* --- Focus (accessibilité) des liens de navigation interne --- */
+main nav a:focus {
+    /*********************/
+    /* Accessibilité (Focus) */
+    /*********************/
+    /* Valeur #005bb5 (proche de #0066cc) */
+    outline: 3px solid var(--color-brand-accent);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Sections de Contenu
+   ========================================================================== */
+
+/* --- Style général des sections --- */
+section {
+    /***********************/
+    /* Animation & Effets */
+    /***********************/
+    opacity: 0;
+    transform: translateY(15px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* --- Titres de section (h2) --- */
+section h2 {
+    /***************/
+    /* Typographie */
+    /***************/
+    font-size: var(--font-size-h2);
+    color: var(--color-text-heading);
+
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    margin-top: 30px;
+    margin-bottom: var(--spacing-sm);
+    /* 10px */
+    padding-bottom: 5px;
+
+    /************/
+    /* Bordures */
+    /************/
+    border-bottom: 2px solid var(--color-border-subtle);
+}
+
+/* --- Paragraphes de section --- */
+section p {
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    margin-bottom: 15px;
+    /* On garde 15px pour l'instant */
+}
+
+/* ==========================================================================
+   Éléments de Contenu (Listes, Liens, Adresse)
+   ========================================================================== */
+
+/* --- Listes à puces (dans section) --- */
+section ul {
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    padding-left: var(--spacing-xl);
+    /* 20px */
+    margin-bottom: var(--spacing-xl);
+    /* 20px */
+}
+
+/* --- Éléments de liste (dans section) --- */
+section li {
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    margin-bottom: var(--spacing-xs);
+    /* 8px */
+}
+
+/* --- Liens (dans section) --- */
+section a {
+    /***************/
+    /* Typographie */
+    /***************/
+    color: var(--color-brand-accent);
+    text-decoration: none;
+}
+
+section a:hover {
+    /***************/
+    /* Typographie */
+    /***************/
+    text-decoration: underline;
+}
+
+/* --- Balise Adresse --- */
+address {
+    /***************/
+    /* Typographie */
+    /***************/
+    font-style: normal;
+
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    display: inline;
+}
+
+/* ==========================================================================
+   Classes Utilitaires (Icônes)
+   ========================================================================== */
+
+/* --- Base des icônes (pseudo-élément) --- */
+.icon-about::before,
+.icon-competences::before,
+.icon-experiences::before,
+.icon-formations::before {
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    margin-right: var(--spacing-xs);
+    /* 8px */
+}
+
+/* --- Icônes spécifiques (Emoji) --- */
+.icon-about::before {
+    content: "👤";
+}
+
+.icon-competences::before {
+    content: "💻";
+}
+
+.icon-experiences::before {
+    content: "📅";
+}
+
+.icon-formations::before {
+    content: "🎓";
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+/* --- Délais d'animation pour les sections --- */
+section:nth-of-type(2) {
+    animation-delay: 0.2s;
+}
+
+section:nth-of-type(3) {
+    animation-delay: 0.4s;
+}
+
+section:nth-of-type(4) {
+    animation-delay: 0.6s;
+}
+
+/* --- Définition de l’animation fadeIn --- */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================================================
+   Responsive (Point de rupture)
+   ========================================================================== */
+
+/* S'applique à 768px OU PLUS */
+/* Rappel : les variables ne fonctionnent pas dans cette ligne,
+   donc 768px est écrit en dur. */
+
+@media (min-width: 768px) {
+
+    main {
+        /* Restaure la mise en page 3 colonnes pour les grands écrans */
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "nav   nav   nav"
+            "about about about"
+            "competences experiences formations";
+    }
+}

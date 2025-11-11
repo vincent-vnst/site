@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <base href="../">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet 1 - Portfolio de Vincent Vanneste</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projet.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header id="haut" aria-label="En-tête du site">
+        <figure aria-labelledby="figcaption-vv">
+            <img src="images/photo.jpg" alt="Photo de Vincent Vanneste">
+            <figcaption id="figcaption-vv">Vincent Vanneste</figcaption>
+        </figure>
+
+        <h1>Portfolio de Vincent Vanneste</h1>
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="https://www.univ-littoral.fr/" target="_blank">ULCO</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <article aria-labelledby="titre-projet1" class="projets">
+
+            <header>
+                <h2 id="titre-projet1">Projet 1 <br> Découverte du HTML et du CSS</h2>
+                <figure>
+                    <img src="images/projet1.jpg" alt="Capture d’écran du Projet 1">
+                    <figcaption>Page d’accueil du projet HTML/CSS</figcaption>
+                </figure>
+            </header>
+
+            <section aria-labelledby="description-projet">
+                <h2 id="description-projet">Description du projet</h2>
+                <p>
+                    Ce premier projet consiste à créer un mini-site en HTML et CSS.
+                    L’objectif est de comprendre la structure d’une page web,
+                    d’utiliser les balises sémantiques et d’appliquer les premières règles de style CSS.
+                </p>
+            </section>
+
+            <section aria-labelledby="objectifs-projet">
+                <h2 id="objectifs-projet">Objectifs pédagogiques</h2>
+                <ul>
+                    <li>Découvrir la structure d’un document HTML5.</li>
+                    <li>Apprendre à organiser un site web avec plusieurs pages liées.</li>
+                    <li>Utiliser le CSS pour la mise en forme du contenu.</li>
+                    <li>Publier le site sur GitHub Pages.</li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="competences-visees">
+                <h2 id="competences-visees">Compétences visées</h2>
+                <ul>
+                    <li>Structurer et organiser un site web en utilisant le HTML sémantique et les bonnes pratiques de
+                        codage.</li>
+                    <li>Mettre en forme et personnaliser l’apparence d’un site avec le CSS (Flexbox, Grid, couleurs,
+                        polices, effets).</li>
+                    <li>Créer un portfolio complet avec une navigation cohérente.</li>
+                    <li>Intégrer des contenus multimédias accessibles et esthétiques.</li>
+                    <li>Adapter un site aux différents écrans grâce au responsive design et aux media queries.</li>
+                    <li>Déployer un site en ligne via GitHub Pages et le valider (W3C, Lighthouse).</li>
+                    <li>Présenter et valoriser son travail avec une identité graphique cohérente.</li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="resultat-projet">
+                <h2 id="resultat-projet">Résultat obtenu</h2>
+                <p>
+                    Le projet final se compose d’une page d’accueil, d’une galerie de projets et d'une page par projet.
+                    Le site est responsive et conforme aux standards du W3C.
+                </p>
+                <p>
+                    <a href="" class="btn" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-eye"></i> Voir la démo
+                    </a>
+                </p>
+            </section>
+
+            <nav class="nav-projets" aria-label="Navigation entre les projets">
+                <a href="projets/projet2.html" class="next">Projet suivant →</a>
+            </nav>
+
+        </article>
+    </main>
+
+    <footer aria-label="Pied de page">
+        <p>&copy; 2025 <strong>Vincent Vanneste</strong>. Tous droits réservés.</p>
+        <!-- Réseaux sociaux -->
+        <div class="socials" role="navigation" aria-label="Réseaux sociaux">
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/" target="_blank" aria-label="X">
+                <i class="fab fa-x-twitter"></i>
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

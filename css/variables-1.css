@@ -1,0 +1,104 @@
+/* ==========================================================================
+   Variables Sémantiques
+   ========================================================================== */
+/* ==========================================================================*/
+:root {
+
+    /* === Couleurs de Marque (Brand) === */
+    /* On passe du bleu à un violet "électrique" */
+    --color-brand-primary: #9f7aea;
+    --color-brand-dark: #6b46c1;
+    --color-brand-accent: #b794f4;
+    --color-brand-hover: #d6bcfa;
+
+    /* === Couleurs de Fond (Background) === */
+    /* Le fond devient sombre, le header aussi */
+    --color-bg-body: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+    --color-bg-header: linear-gradient(135deg, #2d3748, #1a202c);
+    --color-bg-footer: linear-gradient(135deg, #171923, #1a202c, #171923, #000);
+    --color-bg-nav-hover: #4a5568;
+    --color-bg-card-light: #2d3748;
+    /* Fond de carte sombre */
+    --color-bg-card-mid: #4a5568;
+    /* Milieu de dégradé */
+    --color-bg-card: linear-gradient(135deg,
+            var(--color-bg-card-light) 0%,
+            var(--color-bg-card-mid) 100%);
+
+    /* === Couleurs de Texte === */
+    /* Tout le texte est inversé : clair sur fond sombre */
+    --color-text-primary: #e2e8f0;
+    /* Corps de texte (gris clair) */
+    --color-text-secondary: #cbd5e0;
+    /* (ex: survol nav) */
+    --color-text-heading: #f7fafc;
+    /* Titres (blancs) */
+    --color-text-inverted: #1a202c;
+    /* Texte sur fonds clairs (rare) */
+    --color-text-nav-link: #a0aec0;
+    /* Liens nav header (gris moyen) */
+    --color-text-caption: #718096;
+    /* Légendes (gris foncé) */
+
+    /* === Couleurs de Bordure et UI === */
+    /* Les bordures claires deviennent des bordures sombres */
+    --color-border-subtle: #4a5568;
+    --color-border-medium: #718096;
+    --color-ui-nav-bar: var(--color-brand-primary);
+    /* Barre utilise la couleur de marque */
+
+    /* === Polices === */
+    /* On passe à un look "tech" : police mono pour le corps */
+    --font-family-body: 'Fira Code', 'JetBrains Mono', monospace;
+    --font-family-heading: 'Inter', 'system-ui', sans-serif;
+    --font-weight-heading: 600;
+
+    /* === Échelle de Typographie Fluide === */
+    /* L'échelle est structurelle, on n'y touche pas ! */
+    --font-size-body: clamp(0.95rem, 0.9rem + 0.2vw, 1.1rem);
+    --font-size-caption-avatar: clamp(0.85rem, 0.8rem + 0.2vw, 1rem);
+    --font-size-caption-project: clamp(0.8rem, 0.75rem + 0.2vw, 0.85rem);
+    --font-size-p-project: clamp(0.85rem, 0.8rem + 0.2vw, 0.9rem);
+    --font-size-h1-header: clamp(2rem, 1.75rem + 1vw, 2.5rem);
+    --font-size-h1-main: clamp(2rem, 1.8rem + 0.5vw, 2.2rem);
+    --font-size-h2: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+    --font-size-h3-project: clamp(1rem, 0.95rem + 0.2vw, 1.1rem);
+    --font-size-h2-project: clamp(1.5rem, 1.3rem + 1vw, 1.8rem);
+    --font-size-social-icon: clamp(1.5rem, 1.4rem + 0.5vw, 1.75rem);
+
+    /* === Espacements === */
+    /* La structure ne change pas */
+    --spacing-xs: 8px;
+    --spacing-sm: 10px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 20px;
+    --spacing-xxl: 32px;
+
+    /* === Tailles de Layout === */
+    /* La structure ne change pas */
+    --avatar-size-mobile: 120px;
+    --avatar-size-desktop: 150px;
+    --container-max-width: 1000px;
+
+    /* === Arrondis (Borders) === */
+    /* On réduit les arrondis pour un look plus "carré" et "tech" */
+    --border-radius-sm: 2px;
+    --border-radius-md: 2px;
+    --border-radius-lg: 4px;
+
+    /* === Ombres (Shadows) === */
+    /* Les ombres sont peu visibles en dark mode, on les remplace par des bordures */
+    /* (On les met transparentes pour les "désactiver" là où elles sont utilisées) */
+    --shadow-card: 0 0 0 1px var(--color-border-subtle);
+    /* Remplace l'ombre par une bordure */
+    --shadow-header: none;
+    /* Le header a déjà une bordure */
+    --shadow-image: 0 0 0 1px var(--color-border-subtle);
+    --shadow-avatar-hover: none;
+    /* Le transform est suffisant */
+    --shadow-card-hover: 0 0 0 2px var(--color-brand-accent);
+    /* Surbrillance à la place */
+    --shadow-text: none;
+    /* Pas d'ombre de texte */
+}

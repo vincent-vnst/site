@@ -1,0 +1,259 @@
+/* ==========================================================================
+   Mise en page de la Grille "Projets"
+   ========================================================================== */
+.projets {
+    /***********************/
+    /* Mise en page (Grid) */
+    /***********************/
+    display: grid;
+    /* C'est déjà responsive ! */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    gap: var(--spacing-xl);
+    /* 20px */
+}
+
+/* ==========================================================================
+   Titre Principal de la Section "Projets"
+   ========================================================================== */
+.projets>h2 {
+    /***********************/
+    /* Mise en page (Grid) */
+    /***********************/
+    grid-column: 1 / -1;
+
+    /***************/
+    /* Typographie */
+    /***************/
+    text-align: center;
+    font-size: var(--font-size-h2-project);
+    font-weight: var(--font-weight-heading);
+
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    padding-bottom: 5px;
+
+    /************/
+    /* Bordures */
+    /************/
+    border-bottom: 2px solid var(--color-border-medium);
+}
+
+/* ==========================================================================
+   Cartes de Projet (Article)
+   ========================================================================== */
+
+/* --- Style de base des articles --- */
+.projets>article {
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    padding: var(--spacing-sm);
+    /* 10px */
+
+    /****************************/
+    /* Couleurs & Arrière-plans */
+    /****************************/
+    /* NOTE: Vous devez ajouter --color-bg-card-light, --color-bg-card-mid,
+       et --color-bg-card à votre :root principal */
+    background: var(--color-bg-card,
+            linear-gradient(135deg,
+                var(--color-text-inverted, #fff) 0%,
+                var(--color-bg-card-light, #f0f8ff) 25%,
+                var(--color-bg-card-mid, #d0f0ff) 50%,
+                var(--color-bg-card-light, #f0f8ff) 75%,
+                var(--color-text-inverted, #fff) 100%));
+    background-size: 300% 300%;
+
+    /********************/
+    /* Bordures & Ombre */
+    /********************/
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-card);
+
+    /***************/
+    /* Typographie */
+    /***************/
+    text-align: left;
+
+    /******************/
+    /* Positionnement */
+    /******************/
+    position: relative;
+
+    /***************/
+    /* Transitions */
+    /***************/
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Survol des articles --- */
+.projets>article:hover {
+    /*******************/
+    /* Transformations */
+    /*******************/
+    transform: translateY(-5px);
+
+    /********************/
+    /* Bordures & Ombre */
+    /********************/
+    box-shadow: var(--shadow-card-hover);
+
+    /*************/
+    /* Animation */
+    /*************/
+    animation: gradientMove 3s linear infinite;
+}
+
+/* ==========================================================================
+   Contenu des Cartes (Typo, Images, Liens)
+   ========================================================================== */
+
+/* --- Titres des projets (h3) --- */
+.projets h3 {
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    margin-top: 0;
+
+    /***************/
+    /* Typographie */
+    /***************/
+    font-size: var(--font-size-h3-project);
+}
+
+/* --- Paragraphes des projets --- */
+.projets p {
+    /***************/
+    /* Typographie */
+    /***************/
+    font-size: var(--font-size-p-project);
+    color: var(--color-text-secondary);
+}
+
+/* --- Conteneur Figure (pour image) --- */
+.projets figure {
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Images des projets (fusion des doublons) --- */
+.projets figure img {
+    /**************/
+    /* Dimensions */
+    /**************/
+    width: 100%;
+    height: auto;
+
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    /* 8px */
+
+    /************/
+    /* Bordures */
+    /************/
+    border-radius: var(--border-radius-sm);
+    /* 4px */
+    border: 1px solid var(--color-border-medium);
+
+    /***************/
+    /* Transitions */
+    /***************/
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- Survol des images --- */
+.projets figure img:hover {
+    /*******************/
+    /* Transformations */
+    /*******************/
+    transform: scale(1.05);
+
+    /********************/
+    /* Bordures & Ombre */
+    /********************/
+    box-shadow: var(--shadow-text);
+}
+
+/* --- Légendes des images --- */
+.projets figure figcaption {
+    /***************/
+    /* Typographie */
+    /***************/
+    font-size: var(--font-size-caption-project);
+    color: var(--color-text-caption);
+    text-align: center;
+}
+
+/* --- Liens des projets --- */
+.projets a {
+    /**********************/
+    /* Boîte & Espacement */
+    /**********************/
+    display: inline-block;
+
+    /***************/
+    /* Typographie */
+    /***************/
+    text-decoration: none;
+    color: var(--color-brand-accent);
+    font-weight: bold;
+
+    /***************/
+    /* Transitions */
+    /***************/
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* --- Survol des liens --- */
+.projets a:hover {
+    /***************/
+    /* Typographie */
+    /***************/
+    color: var(--color-brand-dark);
+    text-decoration: underline;
+
+    /*******************/
+    /* Transformations */
+    /*******************/
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* --- Focus (accessibilité) des liens --- */
+.projets a:focus {
+    /*********************/
+    /* Accessibilité (Focus) */
+    /*********************/
+    outline: 3px solid var(--color-brand-accent);
+    outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Animations (Keyframes)
+   ========================================================================== */
+
+/* --- Animation du gradient au survol des cartes --- */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
